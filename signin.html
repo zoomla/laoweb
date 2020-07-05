@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>橙汁园餐厅 -- 登录</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >  
+<link rel="stylesheet" href="res/css/bootstrap4.min.css" >
+<link rel="stylesheet" href="res/css/zico.min.css" >
+<script src="res/js/jquery-3.2.1.min.js" ></script>
+<script src="res/js/bootstrap4.min.js" ></script>
+
+<link href="resources/css/signin.css" rel="stylesheet" type="text/css">
+</head>
+	
+<body>
+	<div class="container-fluid">
+        <div class="row">
+			<div class="col-sm-10 col-md-offset-1 wrap signin">
+				<div class="row">
+					<div class="col-sm-4 content">
+						<div class="row">
+							<div class="col-sm-12 title">
+								<a href="index.html">&nbsp;首页&nbsp;</a>
+								<a href="signin.html">&nbsp;登录/注册&nbsp;</a>
+								<a href="shopcart.html">&nbsp;购物车&nbsp;</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 main">
+								<div class="row">
+									<div class="col-sm-12 header">
+										<a href="signup.html">注册</a>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 logo">
+										<div>
+											<img alt="" src="resources/images/signin-logo.png">
+											<span>用户登陆</span>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+											<div class="input-wrap">
+												<img alt="" src="resources/images/signin-user.png">
+												<input type="text" id="userName" placeholder="请输入手机号">
+											</div>
+											<div class="input-wrap">
+												<img alt="" src="resources/images/signin-pwd.png">
+												<input type="password" id="userPwd" placeholder="请输入密码">
+											</div>
+											<div class="input-wrap">
+												<img alt="" src="resources/images/signin-cpt.png">
+												<input class="sort" type="text" style="width: 40%" id="userCode" placeholder="请输入验证码">
+												<img class="signin-cpt" alt="" src="resources/images/signin-cpts.png">
+											</div>
+											<div class="input-wrap nobg">
+												<button class="btn-inline lbtn" id="userLogin">登录</button>
+												<button class="btn-inline" id="pback">找回密码</button>
+											</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-12 footer">
+						<h1>订餐热线：0772-1234567</h1>
+						<p>版权所有@ 2012-2019 南方橙汁园连锁有限公司   桂ICP备90887766号  桂餐证字2010110108002888<br>
+						地址：桂柳市文林区中文苑路1号橙汁园大厦B座111层11号</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$("#userLogin").click(function(){
+			if($("#userName").val() == ""){
+			   		alert("账号不能为空！");
+			   }else if($("#userPwd").val() == ""){
+				   alert("密码不能为空！");
+			   }else if($("#userCode").val() == ""){
+							alert("验证码不能为空");
+						}else if($("#userCode").val() != "pwds"){
+								 	alert("验证码输入有误");
+								 }else if($("#userName").val() == "123" && $("#userPwd").val() == "123"){
+										window.location.href='index.html';
+									}else{
+											alert("您的账号或密码错误！");
+										}
+		});
+	</script>
+</body>
+</html>

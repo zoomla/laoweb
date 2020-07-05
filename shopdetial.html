@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>橙汁园餐厅 -- 详情</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >  
+<link rel="stylesheet" href="res/css/bootstrap4.min.css" >
+<link rel="stylesheet" href="res/css/zico.min.css" >
+<script src="res/js/jquery-3.2.1.min.js" ></script>
+<script src="res/js/bootstrap4.min.js" ></script>
+
+<link href="resources/css/shopdetail.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="container-fluid">
+        <div class="row">
+			<div class="col-sm-10 col-md-offset-1 wrap">
+				<div class="row">
+					<div class="col-sm-12">
+						<iframe src="header.html" style="height: 168px;"></iframe>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 content">
+						<div class="block">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="crumb">
+										<ul>
+											<li><a href="index.html">首页</a></li>
+											<li><span>/</span></li>
+											<li><a id="types" href="#">今日新品</a></li>
+											<li><span>/</span></li>
+											<li><a id="lists" href="#">商品详情</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12 block-wrap">
+									<div class="row">
+										<div col-sm-12>
+											<h3>回锅肉炒西芹片</h3>
+										</div>
+									</div>
+									<div class="row">
+									<div class="col-sm-5 images">
+										<div class="row">
+											<div class="col-sm-10 col-md-offset-1 img-wrap">
+													<div id="small">
+														<img src="resources/images/foods/01.jpg" width="100%">
+														<div id="shadow"></div>
+														<div id="cover"></div>	
+													</div>
+													<div id="big">
+														<img alr="" src="resources/images/foods/01.jpg" width="100%">
+													</div>
+												
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<ul>
+													<li><a class="item" href="shopdetial.html"><img alr="" src="resources/images/foods/01.jpg"></a></li>
+													<li><a class="item" href="shopdetial.html"><img alr="" src="resources/images/foods/01.jpg"></a></li>
+													<li><a class="item" href="shopdetial.html"><img alr="" src="resources/images/foods/01.jpg"></a></li>
+													<li><a class="item" href="shopdetial.html"><img alr="" src="resources/images/foods/01.jpg"></a></li>
+												</ul>
+											</div>
+										</div>
+											
+										</div>
+										<div class="col-sm-7 detials">
+											<div class="row">
+												<div class="col-sm-12">
+													<ul>
+														<li class="hot">优惠活动：11:30-14:30点餐7折</li>
+														<li>促销价：<em class="hot">￥12.00</em></li>
+														<li>
+															<div class="item-wrap">
+																<div class="item">原价：<span>￥15.00</span></div>
+																<div class="item">累计销量：1320 份</div>
+															</div>
+														</li>
+														<li class="detial-wrap">
+															<label>详情：</label>
+															<div class="detial">
+																“西湖醋鱼”是杭州名菜中的看家菜。如今烹制西湖醋鱼最为有名的是孤山南麓的百年老店“楼外楼”。西湖醋鱼，又称"叔嫂传珍"，传说是古时嫂嫂给小叔烧过一碗加糖加醋的鱼而来的。选用体态适中的草鱼，最好先在清水氽熟，要掌握火候。装盘后淋上糖醋芡汁。成菜色泽红亮，肉质鲜嫩，酸甜可口，略带蟹味。
+															</div>
+														</li>
+														<li class="form-wrap">
+															<form>
+																数量：
+																<div class="input-wrap">
+																	<button class="sub">-</button>
+																	<input type="text" class="number" value="1">
+																	<button class="add">+</button>
+																</div> 
+																库存<span class="numbers">100</span>份
+																<div class="btn-wrap">
+																	<button class="buy">立刻购买</button>
+																	<button class="add">加入购物车</button>
+																</div>
+															</form>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<hr color="#e3e3e2">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<iframe src="footer.html" style="height: 120px;"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		window.onload=function(){
+	small=document.getElementById("small");
+	shadow=document.getElementById("shadow");
+	shadowWH=shadow.style.width?shadow.style.width:document.defaultView.getComputedStyle(shadow,null).width;
+	shadowWH=parseInt(shadowWH);
+	smallW=small.style.width?small.style.width:document.defaultView.getComputedStyle(small,null).width;
+	smallW=parseInt(smallW);
+	smallMT=small.style.marginTop?small.style.marginTop:document.defaultView.getComputedStyle(small,null).marginTop;
+	smallMT=parseInt(smallMT);
+	big=document.getElementById("big");
+	bigW=big.style.width?big.style.width:document.defaultView.getComputedStyle(big,null).width;
+	bigW=parseInt(bigW);
+	bigImg=big.getElementsByTagName("img")[0];
+	move();
+}
+function move(){
+	small.onmouseover=function(){
+		shadow.style.display="block";
+		big.style.display="block";
+		change(event);
+	}
+	small.onmouseout=function(){
+		shadow.style.display="none";
+		big.style.display="none";
+	}
+	small.onmousemove=function(){
+		change(event);
+	}
+}
+function change(event){
+	var evt=event?event:window.event;
+	var moveL=evt.layerX-shadowWH/2;
+	var moveT=evt.layerY-shadowWH/2;
+	
+	
+	if(moveL<0){
+		moveL=0;
+	}
+	if(moveL>smallW-shadowWH){
+		moveL=smallW-shadowWH;
+	}
+	
+	if(moveT<0){
+		moveT=0;
+	}
+	if(moveT>smallW-shadowWH){
+		moveT=smallW-shadowWH;
+	}
+	
+	shadow.style.left=moveL+"px";
+	shadow.style.top=moveT+"px";
+	/**
+	 * 图片放大
+	 */
+	big.style.left=50+"px";
+	big.style.top=smallMT+"px";
+	bigImgW=bigImg.offsetWidth;
+	var scale=bigImgW/bigW;
+	bigImg.style.top=-moveT*scale+"px";
+	bigImg.style.left=-moveL*scale+"px";
+}
+		</script>
+</body>
+</html>

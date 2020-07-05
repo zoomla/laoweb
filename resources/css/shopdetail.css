@@ -1,0 +1,215 @@
+body,table,tr,th,td,ul,ol,li,p {
+	margin: 0;
+	padding: 0;
+}
+body {
+	text-align: center;
+}
+.wrap {
+	margin: auto;
+	text-align: left;
+}
+.wrap iframe {
+	width: 100%;
+	border: none;
+}
+.wrap .content {
+	position: relative;
+	min-height: 600px;
+}
+.wrap .content .block {
+	margin-top: 18px;
+}
+.wrap .content .block .crumb {
+	width: 100%;
+	height: 25px;
+	margin: 15px 30px;
+}
+.wrap .content .block .crumb li {
+	float: left;
+	width: auto;
+	display: block;
+	list-style: none;
+}
+.wrap .content .block .crumb li a {
+	color: #999;
+	width: auto;
+	display: block;
+	margin: 0 10px;
+	text-decoration: none;
+	border-bottom: 3px solid #fff;
+}
+.wrap .content .block .crumb li span {
+	color: #999;
+}
+.wrap .content .block .block-wrap {
+	margin: 10px 25px;
+	min-height: 346px;
+}
+.wrap .content .block .block-wrap h3 {
+	padding: 10px;
+	text-align: center;
+	margin: -5px 0 18px;
+	border-bottom: 1px solid #e3e3e2;
+}
+.wrap .content .block .block-wrap .images {
+	float: left;
+	background-color: #fff;
+}
+.wrap .content .block .block-wrap .images .img-wrap {
+	padding: 8px;
+
+	border: 1px solid #e3e3e2;
+}
+.wrap .content .block .block-wrap .images .img-wrap img {
+	width: 100%;
+}
+.wrap .content .block .block-wrap ul {
+	margin: 10px 45px;
+}
+.wrap .content .block .block-wrap .images li {
+	width: 63px;
+	padding: 5px;
+	margin: 0 10px;
+	display: inline-block;
+	border: 1px solid #e3e3e2;
+}
+.wrap .content .block .block-wrap .images li img {
+	width: 100%;
+}
+.wrap .content .block .block-wrap .detials {
+	height: 475px;
+}
+.wrap .content .block .block-wrap .detials ul {
+	margin: 0 120px 0 0;
+}
+.wrap .content .block .block-wrap .detials .hot {
+	color: #d2364c;
+	font-weight: bolder;
+}
+.wrap .content .block .block-wrap .detials li {
+	color: #999;
+	list-style: none;
+	padding: 5px 10px;
+	border-bottom: 1px dashed #e3e3e2;
+}
+.wrap .content .block .block-wrap .detials li em {
+	font-style: normal;
+}
+.wrap .content .block .block-wrap .detials li span {
+	text-decoration: line-through;
+}
+.wrap .content .block .block-wrap .detials li .item-wrap {
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+}
+.wrap .content .block .block-wrap .detials li .item-wrap .item {
+	float: left;
+	width: 50%;
+}
+.wrap .content .block .block-wrap .detials li.detial-wrap {
+	border-bottom: none;
+}
+.wrap .content .block .block-wrap .detials li.detial-wrap label {
+	display: block;
+	line-height: 24px;
+	padding-bottom: 5px;
+}
+.wrap .content .block .block-wrap .detials li.detial-wrap .detial {
+	height: 195px;
+	margin: 0 -10px;
+	padding: 30px 10px;
+	border: 1px solid #ccc;
+	background-color: #e3e3e2;
+}
+.wrap .content .block .block-wrap .detials li.form-wrap {
+	border-bottom: none;
+}
+.wrap .content .block .block-wrap .detials li.form-wrap .input-wrap {
+	display: inline-block;
+}
+.wrap .content .block .block-wrap .detials li.form-wrap .input-wrap button {
+	width: 30px;
+	height: 30px;
+	border: none;
+	line-height: 30px;
+	display: inline-block;
+	background-color: #e3e3e2;
+}
+.wrap .content .block .block-wrap .detials li.form-wrap .input-wrap input {
+	width: 3em;
+	text-align: center;
+}
+.wrap .content .block .block-wrap .detials li.form-wrap span {
+	text-decoration: none;
+}
+.wrap .content .block .block-wrap .detials li.form-wrap .btn-wrap {
+	margin: 0 30px;
+	display: inline-block;
+}
+.wrap .content .block .block-wrap .detials li.form-wrap .btn-wrap button {
+	width: 100px;
+	height: 36px;
+	margin: 10px 2px;
+	color: #fc2400;
+	border: 1px solid #fc2400;
+	background-color: #fcdad5;
+}
+.wrap .content .block .block-wrap .detials li.form-wrap .btn-wrap button.add {
+	color: #fff;
+	background-color: #fc2400;
+}
+.wrap hr {
+	clear: both;
+	margin: -5px 30px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+#small{
+			width: 80%;
+			position: relative;
+			float: left;
+		}
+		#shadow{
+			width: 100px;
+			height: 100px;
+			background-color: black;
+			opacity: .2;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			display: none;
+			cursor: move;
+		}
+		#cover{
+			width: 100%;
+			height:100%;
+			z-index: 10;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			cursor: move;
+		}
+		#big{
+			width: 350px;
+			height: 350px;
+			margin-left: 380px;
+			position: absolute;
+			overflow: hidden;
+			display: none;
+			z-index: 999
+		}
+		#big img{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}

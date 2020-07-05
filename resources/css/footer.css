@@ -1,0 +1,18 @@
+body,table,tr,th,td,ul,ol,li,p {
+	margin: 0;
+	padding: 0;
+}
+.footer {
+	clear: both;
+	color: #888886;
+	text-align: center;
+	min-height: 120px;
+	background-color: #e3e3e2;
+}
+.footer h1 {
+	margin: 0;
+	padding: 20px 0 10px 0;
+}
+.footer p {
+	line-height: 20px;
+}
