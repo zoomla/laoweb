@@ -48,12 +48,19 @@ footer { margin-top: 1rem; padding-top: 1.6rem; padding-bottom: 1rem; color: #57
 footer strong { font-size: 2.2rem; }
 footer a { color: #575555; }
 
+.ilogin { padding-top: 6rem; padding-bottom: 2rem; background: url("images/login_bg.png") top no-repeat; background-size: cover; }
+
+.ilogin_con { padding: 2rem 1rem; background: #F06478; border-radius: 1rem; }
+.ilogin_con h1 { font-size: 1.68rem; }
+
 /*769-1930分辨率之间传统低分屏幕优化*/
 /*小于768px手机优化*/
 @media screen and (max-width: 768px) { header .form-control { width: auto !important; }
   .ihero .navbar { padding-right: 0; }
   .ihero .navbar .navbar-toggler { border: 1px solid #ccc; position: absolute; right: 0; }
-  .ihero .navbar .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); } }
+  .ihero .navbar .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+  .ilogin { padding-top: 0; }
+  footer strong { font-size: 1.8rem; } }
 /*key:UG93ZXJlZCBieSBab29tbGEh6YCQ5rWqQ01TIHd3d3cuejAxLmNvbQ== */
 
 /*# sourceMappingURL=global.css.map */

@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>橙汁园餐厅 -- 首页</title>
+<title>首页-橙汁园餐厅</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >  
 <link rel="stylesheet" href="res/css/bootstrap4.min.css" >
 <link rel="stylesheet" href="res/css/zico.min.css" >
@@ -15,8 +15,9 @@
 <div class="container-xl">
 <ul>
 <li><a href="index.html">首页</a></li>
-<li><a href="index.html">登录/注册</a></li>
-<li><a href="index.html">购物车</a></li>
+<li><a href="login.html">用户登录</a></li>
+<li><a href="reg.html">会员注册</a></li>
+<li><a href="cart.html">购物车</a></li>
 </ul>
 </div>
 </div>
@@ -195,24 +196,7 @@
 </footer>
 
 <script>
-	$("#advertisement").css("display", "none");
-	setTimeout(function(){$("#advertisement").css("display", "block");}, 2000);
-	$("#closes").click(function(){
-		$("#advertisement").css("display", "none");
-	});
 
-	$("#seckill_1").click(function(){
-		$("#seckill_1_main").css("display", "block");
-		$("#seckill_2_main").css("display", "none");
-		$("#seckill_2").removeClass("test2");
-		$("#seckill_1").addClass("test");
-	});
-	$("#seckill_2").click(function(){
-		$("#seckill_2_main").css("display", "block");
-		$("#seckill_1_main").css("display", "none");
-		$("#seckill_2").addClass("test2");
-		$("#seckill_1").removeClass("test");
-	});
 </script>
 </body>
 </html>
