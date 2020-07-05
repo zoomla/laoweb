@@ -36,7 +36,7 @@ header{padding-top: 1rem;
 
 //首页大屏
 .ihero{
-.navbar{padding-left: 0;
+.navbar{padding-left: 0;padding-bottom: 0 ;border-bottom: 2px solid $主红色;
 	.navbar-brand{ width: 20rem; background:$主红色;color: #fff; text-align: center;}
 	}
 }
@@ -66,9 +66,8 @@ li{font-size: 1.42rem;font-weight: bold;text-align: center; border-radius:10px;
 	p{margin-bottom: 0; font-size: 0.8rem; color: #ccc;font-weight: normal;}
 	span{padding-left: 1rem;}
 	em{color: $主红色;padding-right: 1rem;}
-	&:hover{ box-shadow: 4px 4px 6px 6px rgba(204,204,204,0.8)}
+	&:hover{@include 五秒消失切换;margin-top: -1rem; box-shadow: 4px 4px 6px 6px rgba(204,204,204,0.8);}
 	}
-
 }
 
 
@@ -78,14 +77,70 @@ strong{font-size: 2.2rem;}
 a{color: #575555;}
 }
 
-
 //用户登录页定义
 .ilogin{padding-top:6rem;padding-bottom: 2rem; background: url("images/login_bg.png") top no-repeat;background-size: cover;}
 
 .ilogin_con{padding: 2rem 1rem; background:#F06478;border-radius: 1rem;
 h1{font-size: 1.68rem;}
+}
+
+//面包屑导航
+.mysite{margin-top: 1rem;}
+
+//商品详情页定义
+.item_con{margin-top: 1rem;
+h1{font-size: 1.68rem;}
+}
+
+
+.box { width: 100%; }
+
+.tb-thumb { margin: 10px 0 0; overflow: hidden; 
+li { margin-bottom: 0.2rem; padding-left: 0.2rem !important; padding-right: 0.2rem !important; float: left; background: none repeat scroll 0 0 transparent; }
+li img { padding: 2px; width: 100%; height: 4rem; border: 1px solid #ddd; }
+li a:focus { outline: none; }
+}
+
+.tb-s310, .tb-s310 a { width: 100%; }
+.tb-s310, .tb-s310 img { width: 100%; padding: 1px; }
+.tb-booth { border: 1px solid #cdcdcd; position: relative; z-index: 1; }
+
+#thumblist { padding-left: 0.2rem; padding-right: 0.2rem; }
+#thumblist .tb-selected img { border: 1px solid #f00; }
+
+.con_shop_list .list-group-item { margin-bottom: 0; padding-left: 0; padding-right: 0; padding-bottom: 5px; border: none; border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+.con_shop_list span { float: right; }
+
+.con_shop_nums { float: right; width: 8.6rem; }
+.con_shop_nums i { display: block; color: #fff; cursor: pointer; }
+
+.zoomDiv { z-index: 999; position: absolute; top: 0px; left: 0px; width: 200px; height: 200px; background: #ffffff; border: 1px solid #cccccc; display: none; text-align: center; overflow: hidden; }
+
+.zoomMask { position: absolute; background: url(images/mask.png) repeat scroll 0 0 transparent; cursor: move; z-index: 1; }
+
+//购物车
+.icart{
+
 
 }
+.cart_item{ margin-top:1rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

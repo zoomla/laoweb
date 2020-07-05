@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>商品详情-橙汁园餐厅</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >  
+<link rel="stylesheet" href="res/css/bootstrap4.min.css" >
+<link rel="stylesheet" href="res/css/zico.min.css" >
+<script src="res/js/jquery-3.2.1.min.js" ></script>
+<script src="res/js/bootstrap4.min.js" ></script>
+<link rel="stylesheet" href="style/global.css" >
+<script type="text/javascript" src="style/js/jquery.imagezoom.min.js"></script>
+</head>
+<body>
+<div class="mytop">
+<div class="container-xl">
+<ul>
+<li><a href="index.html">首页</a></li>
+<li><a href="login.html">用户登录</a></li>
+<li><a href="reg.html">会员注册</a></li>
+<li><a href="cart.html">购物车</a></li>
+</ul>
+</div>
+</div>
+<!--mytop end-->
+
+<header class="container-xl">
+<div class="row">
+<div class="col-md-4 col-12"><a href="index.html"><img src="style/images/logo.png" alt="橙汁园餐厅"/></a></div>
+<div class="col-md-8 col-12">
+<form class="form-inline" role="search" action="/Search/SearchList" method="get" target="_blank"> <div class="input-group"> <input name="KeyWord" class="form-control" type="text" placeholder="全站搜索"> <div class="input-group-append"> <button class="input-group-text" type="submit" ><i class="zi zi_search" ></i> 搜索</button> </div> </div> </form>
+</div>
+</div>
+</header>
+<!--header end-->
+
+<div class="ask">
+<marquee scrollAmount="5" width="100%" style="background-color: #E1E1E1">橙汁园餐厅出新品啦！欢迎大家到店免费品尝！</marquee>
+</div>
+<!--ask end-->
+
+
+<div class="container-xl ihero">
+<nav class="navbar navbar-expand-md">
+<a class="navbar-brand" href="#">全部分类</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"><a class="nav-link" href="index.html">首页<span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"><a class="nav-link" href="list.html">今日新品</a></li>
+      <li class="nav-item"><a class="nav-link" href="list.html">热闹订单</a></li>
+      <li class="nav-item"><a class="nav-link" href="list.html">限时秒杀</a></li>
+      <li class="nav-item"><a class="nav-link" href="list.html">拼团</a></li>
+      <li class="nav-item"><a class="nav-link" href="list.html">特惠</a></li>
+    </ul>
+  </div>
+ </nav>
+</div> 
+<!--ihero end-->
+
+<nav aria-label="breadcrumb" class="container-xl mysite">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">首页</a></li>
+    <li class="breadcrumb-item"><a href="#">商品列表</a></li>
+    <li class="breadcrumb-item active" aria-current="page">商品详情</li>
+  </ol>
+</nav>
+<!--breadcrumb end-->
+
+
+<div class="container-xl item_con">
+
+<div class="row">
+<div class="col-lg-5 col-md-5 col-sm-12 col-12">
+<div class="box">
+<div class="tb-booth tb-pic tb-s310">
+<a href="style/images/foods_18.jpg"><img src="style/images/foods_18.jpg" alt="秋冬新品-欧美返售限量版 女装" rel="style/images/foods_18.jpg" class="jqzoom" style="cursor: crosshair;"></a>
+</div>
+<div class="row">
+<ul class="tb-thumb list-unstyled" id="thumblist">
+<li class="col-2 tb-selected">
+<div class="tb-pic tb-s40">
+<a href="javascript:;">
+<img src="style/images/foods_18.jpg" mid="style/images/foods_18.jpg" big="style/images/foods_18.jpg" alt="秋冬新品-欧美返售限量版 女装">
+</a>
+</div>
+</li>
+<script type="text/javascript" src="style/js/APIResult.js"></script>
+<script>
+var pics='[{"url":"style/images/foods_22.jpg","desc":""},{"url":"style/images/foods_23.jpg","desc":""},"desc":""}]';
+if(!pics){pics="[]";}
+var jsonstr=JSON.parse(pics);
+if(jsonstr.length>0)
+{
+	for(i=0;i<jsonstr.length;i++)
+	{
+		document.write('<li class="col-2"><div class="tb-pic tb-s40"><a href="javascript:;"><img src="/UploadFiles/'+jsonstr[i].url+'" mid="/UploadFiles/'+jsonstr[i].url+'" big="/UploadFiles/'+jsonstr[i].url+'" alt="'+jsonstr[i].desc+'"></a></div></li>');
+	}
+}
+</script>
+<li class="col-2"><div class="tb-pic tb-s40"><a href="javascript:;"><img src="style/images/foods_19.jpg" mid="style/images/foods_19.jpg" big="style/images/foods_19.jpg" alt=""></a></div></li>
+<li class="col-2"><div class="tb-pic tb-s40"><a href="javascript:;"><img src="style/images/foods_20.jpg" mid="style/images/foods_20.jpg" big="style/images/foods_20.jpg" alt=""></a></div></li>
+<li class="col-2"><div class="tb-pic tb-s40"><a href="javascript:;"><img src="style/images/foods_21.jpg" mid="style/images/foods_21.jpg" big="style/images/foods_21.jpg" alt=""></a></div></li>
+</ul>
+</div>
+</div>
+
+
+</div>
+<div class="col-md-7 col-12">
+<h1>回锅肉炒西芹片</h1>
+<form id="form" name="form" method="post" action="/Cart/Cart" style="margin-bottom:10px;">
+<input name="id" type="hidden" id="id" value="56">
+<ul class="list-group con_shop_list">
+  <li class="list-group-item">编号<span>212018031200009</span></li>
+  <li class="list-group-item">品牌<span>0</span></li>
+  <li class="list-group-item">库存<span>10</span></li>
+  <li class="list-group-item">市场价<span><s>1852.00 元</s></span></li>
+  <li class="list-group-item">零售价<span style="font-size:1.46rem; font-weight:bold; color:#f40;"><i class="zi zi_yensign"></i> 1580.00元</span></li>
+  <li class="list-group-item">购买数量<div class="input-group con_shop_nums">
+<div class="input-group-prepend">
+<span class="input-group-text bg-danger"><i class="zi zi_minus" onclick="Product.minus();"></i></span>
+</div>
+<input type="text" class="form-control text-center" name="Pronum" id="Pronum" value="1" maxlength="8">
+<div class="input-group-append">
+<span class="input-group-text bg-danger"><i class="zi zi_plus" onclick="Product.plus();"></i></span>
+</div>
+</div>
+</li>
+
+</ul>
+<input name="Attribute" id="Attribute" type="hidden" value="">
+<input name="color" value="" id="color" type="hidden">
+<input name="size" value="" id="size" type="hidden">
+</form>
+<a href="cart.html"  class="btn btn-danger"><i class="zi zi_shoppingcart"></i> 立即购买</a>
+<a href="cart.html" class="btn btn-danger"><i class="zi zi_plussquare"></i> 加入购物车</a>
+<a onclick="Product.addFav()" href="javascript:;" class="btn btn-link"><i class="zi zi_heart"></i> 关注商品</a>
+</div>
+</div>
+
+
+</div>
+
+<footer>
+<div class="container-xl">
+<strong>订餐热线:0772-12345222</strong>
+<p>版权所有&copy; 2012-2020 南方橙汁园连锁有限公司 <a href="http://beian.miit.gov.cn" target="_blank">桂ICP备90887766号</a> 桂餐证字2010110108002888<br/>
+地址：桂柳市文林区中文苑路1号橙汁园大厦B座111层11号
+</p>
+</div>
+</footer>
+<script>
+	function commentAnchor() { $("html,body").animate({ scrollTop: $("#iframe_comm").offset().top - 100 }, 300); }
+    function IfrAutoHeight() {
+        var $ifr = $("#comm_ifr");
+        $ifr.height($ifr.contents().height());
+    }
+ 
+</script>
+<script>
+$(document).ready(function(){
+	$(".jqzoom").imagezoom();
+	$("#thumblist li a").click(function(){
+		$(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+		$(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+		$(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+	});
+});
+</script>
+</body>
+</html>

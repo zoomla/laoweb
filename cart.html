@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>购物车-橙汁园餐厅</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >  
+<link rel="stylesheet" href="res/css/bootstrap4.min.css" >
+<link rel="stylesheet" href="res/css/zico.min.css" >
+<script src="res/js/jquery-3.2.1.min.js" ></script>
+<script src="res/js/bootstrap4.min.js" ></script>
+<link rel="stylesheet" href="style/global.css" >
+<script type="text/javascript" src="style/js/jquery.imagezoom.min.js"></script>
+</head>
+<body>
+<div class="mytop">
+<div class="container-xl">
+<ul>
+<li><a href="index.html">首页</a></li>
+<li><a href="login.html">用户登录</a></li>
+<li><a href="reg.html">会员注册</a></li>
+<li><a href="cart.html">购物车</a></li>
+</ul>
+</div>
+</div>
+<!--mytop end-->
+
+<header class="container-xl">
+<div class="row">
+<div class="col-md-4 col-12"><a href="index.html"><img src="style/images/logo.png" alt="橙汁园餐厅"/></a></div>
+<div class="col-md-8 col-12">
+<form class="form-inline" role="search" action="/Search/SearchList" method="get" target="_blank"> <div class="input-group"> <input name="KeyWord" class="form-control" type="text" placeholder="全站搜索"> <div class="input-group-append"> <button class="input-group-text" type="submit" ><i class="zi zi_search" ></i> 搜索</button> </div> </div> </form>
+</div>
+</div>
+</header>
+<!--header end-->
+
+<div class="ask">
+<marquee scrollAmount="5" width="100%" style="background-color: #E1E1E1">橙汁园餐厅出新品啦！欢迎大家到店免费品尝！</marquee>
+</div>
+<!--ask end-->
+
+
+<div class="container-xl ihero">
+<nav class="navbar navbar-expand-md">
+<a class="navbar-brand" href="#">全部分类</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"><a class="nav-link" href="index.html">首页<span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"><a class="nav-link" href="list.html">今日新品</a></li>
+      <li class="nav-item"><a class="nav-link" href="list.html">热闹订单</a></li>
+      <li class="nav-item"><a class="nav-link" href="list.html">限时秒杀</a></li>
+      <li class="nav-item"><a class="nav-link" href="list.html">拼团</a></li>
+      <li class="nav-item"><a class="nav-link" href="list.html">特惠</a></li>
+    </ul>
+  </div>
+ </nav>
+</div> 
+<!--ihero end-->
+
+<nav aria-label="breadcrumb" class="container-xl mysite">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">首页</a></li>
+    <li class="breadcrumb-item"><a href="#">商品列表</a></li>
+    <li class="breadcrumb-item active" aria-current="page">购物车</li>
+  </ol>
+</nav>
+<!--breadcrumb end-->
+
+
+<div class="container-xl icart">
+<section class="container cartbody">
+        <form id="cartForm" method="post" action="Cart_Submit?ProClass=1&amp;bm=">
+            <table id="EGV" class="table-hover table-sm" style="width:100%;">
+                <tbody><tr class="shop_tabtr">
+                    <th></th>
+                    <th style="width: 12%">商品</th>
+                    <th></th>
+                    <th id="ptype_td">单价</th>
+                    <th>数量</th>
+                    <th class="move_d_none">状态</th>
+                    <th class="move_d_none">小计</th>
+                    <th>操作</th>
+                </tr>
+                    </tbody><tbody class="cart_body">
+<tr data-id="1" class="cart_item">
+    <td>
+        <div class="icheckbox_square-blue checked" style="position: relative;"><input type="checkbox" name="prochk" data-store="0" checked="checked" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+    </td>
+    <td>
+        <a href="/Shop/56" target="_blank" title="浏览商品">
+            <img src="style/images/foods_14.jpg" onerror="shownopic(this);" class="preimg_l cart_Ting" style="width: 128px; height: 128px;">
+        </a>
+    </td>
+    <td class="coatShop_title" colspan="2">
+        <a href="/Shop/56" target="_blank" title="浏览商品" style="font-size: 12px;">回锅肉炒西芹</a>
+        <div class="tdline Price_box"><i class="zi zi_yensign"></i><span id="price_1">1580.00</span></div>
+        <table style="margin-top:10px;color:#999;font-size:12px;">
+</table>
+    </td>
+    <td class="pronum_td tdline">
+        <div class="input-group pronum_text" style="display:flex;">
+            <div class="input-group-prepend" onclick="cart.setnum('1','-');">
+                <span class="input-group-text"><i class="zi zi_minus"></i></span>
+            </div>
+            <input type="text" class="form-control" id="pronum_1" value="1" autocomplete="off" onblur="cart.suit.setnum('1',this.value);" data-info="{&quot;min&quot;:1,&quot;max&quot;:9999,&quot;multi&quot;:1}">
+            <div class="input-group-append" onclick="cart.setnum('1','+');">
+                <span class="input-group-text"><i class="zi zi_plus"></i></span>
+            </div>
+        </div>
+    </td>
+    <td class="tdline move_d_none"><span class="r_green_x">有货</span></td>
+    <td class="tdline xj_Price move_d_none"><span id="trprice_1" class="trprice">1580.00</span></td>
+    <td class="tdline">
+        <a href="javascript:;" class="remove_cart btn btn-danger btn-sm" style="color:#fff;" onclick="cart.del('1');"><i class="zi zi_trash"></i></a>
+    </td>
+</tr>   
+
+<tr data-id="1" class="cart_item">
+    <td>
+        <div class="icheckbox_square-blue checked" style="position: relative;"><input type="checkbox" name="prochk" data-store="0" checked="checked" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+    </td>
+    <td>
+        <a href="/Shop/56" target="_blank" title="浏览商品">
+            <img src="style/images/foods_14.jpg" onerror="shownopic(this);" class="preimg_l cart_Ting" style="width: 128px; height: 128px;">
+        </a>
+    </td>
+    <td class="coatShop_title" colspan="2">
+        <a href="/Shop/56" target="_blank" title="浏览商品" style="font-size: 12px;">回锅肉炒西芹</a>
+        <div class="tdline Price_box"><i class="zi zi_yensign"></i><span id="price_1">1580.00</span></div>
+        <table style="margin-top:10px;color:#999;font-size:12px;">
+</table>
+    </td>
+    <td class="pronum_td tdline">
+        <div class="input-group pronum_text" style="display:flex;">
+            <div class="input-group-prepend" onclick="cart.setnum('1','-');">
+                <span class="input-group-text"><i class="zi zi_minus"></i></span>
+            </div>
+            <input type="text" class="form-control" id="pronum_1" value="1" autocomplete="off" onblur="cart.suit.setnum('1',this.value);" data-info="{&quot;min&quot;:1,&quot;max&quot;:9999,&quot;multi&quot;:1}">
+            <div class="input-group-append" onclick="cart.setnum('1','+');">
+                <span class="input-group-text"><i class="zi zi_plus"></i></span>
+            </div>
+        </div>
+    </td>
+    <td class="tdline move_d_none"><span class="r_green_x">有货</span></td>
+    <td class="tdline xj_Price move_d_none"><span id="trprice_1" class="trprice">1580.00</span></td>
+    <td class="tdline">
+        <a href="javascript:;" class="remove_cart btn btn-danger btn-sm" style="color:#fff;" onclick="cart.del('1');"><i class="zi zi_trash"></i></a>
+    </td>
+</tr>
+<tr data-id="1" class="cart_item">
+    <td>
+        <div class="icheckbox_square-blue checked" style="position: relative;"><input type="checkbox" name="prochk" data-store="0" checked="checked" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+    </td>
+    <td>
+        <a href="/Shop/56" target="_blank" title="浏览商品">
+            <img src="style/images/foods_14.jpg" onerror="shownopic(this);" class="preimg_l cart_Ting" style="width: 128px; height: 128px;">
+        </a>
+    </td>
+    <td class="coatShop_title" colspan="2">
+        <a href="/Shop/56" target="_blank" title="浏览商品" style="font-size: 12px;">回锅肉炒西芹</a>
+        <div class="tdline Price_box"><i class="zi zi_yensign"></i><span id="price_1">1580.00</span></div>
+        <table style="margin-top:10px;color:#999;font-size:12px;">
+</table>
+    </td>
+    <td class="pronum_td tdline">
+        <div class="input-group pronum_text" style="display:flex;">
+            <div class="input-group-prepend" onclick="cart.setnum('1','-');">
+                <span class="input-group-text"><i class="zi zi_minus"></i></span>
+            </div>
+            <input type="text" class="form-control" id="pronum_1" value="1" autocomplete="off" onblur="cart.suit.setnum('1',this.value);" data-info="{&quot;min&quot;:1,&quot;max&quot;:9999,&quot;multi&quot;:1}">
+            <div class="input-group-append" onclick="cart.setnum('1','+');">
+                <span class="input-group-text"><i class="zi zi_plus"></i></span>
+            </div>
+        </div>
+    </td>
+    <td class="tdline move_d_none"><span class="r_green_x">有货</span></td>
+    <td class="tdline xj_Price move_d_none"><span id="trprice_1" class="trprice">1580.00</span></td>
+    <td class="tdline">
+        <a href="javascript:;" class="remove_cart btn btn-danger btn-sm" style="color:#fff;" onclick="cart.del('1');"><i class="zi zi_trash"></i></a>
+    </td>
+</tr>
+</tbody>
+                <tbody><tr>
+                    <td colspan="8">
+                        <input type="button" value="批量删除" class="btn btn-danger pl_remove" style="color:#fff;" onclick="cart.batdel();">
+
+                        <span class="Settlement_tex Settlement_texPc">
+                            <span>
+                                数量：<span class="trprice pronum_span">1</span>
+                                总价:<span class="totalmoney">1580.00</span>(不含邮费)
+                            </span>
+                        </span>
+                        <div class="float-right">
+                            <input type="button" value="去结算" class="btn btn-danger ml-2 NextStep_btn" onclick="GetNextStep();" id="RealNext_Btn">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+			</table>
+        </form>
+    </section>
+</div>
+
+
+
+<footer>
+<div class="container-xl">
+<strong>订餐热线:0772-12345222</strong>
+<p>版权所有&copy; 2012-2020 南方橙汁园连锁有限公司 <a href="http://beian.miit.gov.cn" target="_blank">桂ICP备90887766号</a> 桂餐证字2010110108002888<br/>
+地址：桂柳市文林区中文苑路1号橙汁园大厦B座111层11号
+</p>
+</div>
+</footer>
+<script>
+	function commentAnchor() { $("html,body").animate({ scrollTop: $("#iframe_comm").offset().top - 100 }, 300); }
+    function IfrAutoHeight() {
+        var $ifr = $("#comm_ifr");
+        $ifr.height($ifr.contents().height());
+    }
+ 
+</script>
+<script>
+$(document).ready(function(){
+	$(".jqzoom").imagezoom();
+	$("#thumblist li a").click(function(){
+		$(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+		$(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+		$(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+	});
+});
+</script>
+</body>
+</html>
