@@ -9,7 +9,6 @@
 <script src="res/js/jquery-3.2.1.min.js" ></script>
 <script src="res/js/bootstrap4.min.js" ></script>
 <link rel="stylesheet" href="style/global.css" >
-<script type="text/javascript" src="style/js/jquery.imagezoom.min.js"></script>
 </head>
 <body>
 <div class="mytop">
@@ -68,139 +67,293 @@
 <!--breadcrumb end-->
 
 
-<div class="container-xl icart">
-<section class="container cartbody">
-        <form id="cartForm" method="post" action="Cart_Submit?ProClass=1&amp;bm=">
-            <table id="EGV" class="table-hover table-sm" style="width:100%;">
-                <tbody><tr class="shop_tabtr">
-                    <th></th>
-                    <th style="width: 12%">商品</th>
-                    <th></th>
-                    <th id="ptype_td">单价</th>
-                    <th>数量</th>
-                    <th class="move_d_none">状态</th>
-                    <th class="move_d_none">小计</th>
-                    <th>操作</th>
-                </tr>
-                    </tbody><tbody class="cart_body">
-<tr data-id="1" class="cart_item">
-    <td>
-        <div class="icheckbox_square-blue checked" style="position: relative;"><input type="checkbox" name="prochk" data-store="0" checked="checked" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-    </td>
-    <td>
-        <a href="/Shop/56" target="_blank" title="浏览商品">
-            <img src="style/images/foods_14.jpg" onerror="shownopic(this);" class="preimg_l cart_Ting" style="width: 128px; height: 128px;">
-        </a>
-    </td>
-    <td class="coatShop_title" colspan="2">
-        <a href="/Shop/56" target="_blank" title="浏览商品" style="font-size: 12px;">回锅肉炒西芹</a>
-        <div class="tdline Price_box"><i class="zi zi_yensign"></i><span id="price_1">1580.00</span></div>
-        <table style="margin-top:10px;color:#999;font-size:12px;">
-</table>
-    </td>
-    <td class="pronum_td tdline">
-        <div class="input-group pronum_text" style="display:flex;">
-            <div class="input-group-prepend" onclick="cart.setnum('1','-');">
-                <span class="input-group-text"><i class="zi zi_minus"></i></span>
-            </div>
-            <input type="text" class="form-control" id="pronum_1" value="1" autocomplete="off" onblur="cart.suit.setnum('1',this.value);" data-info="{&quot;min&quot;:1,&quot;max&quot;:9999,&quot;multi&quot;:1}">
-            <div class="input-group-append" onclick="cart.setnum('1','+');">
-                <span class="input-group-text"><i class="zi zi_plus"></i></span>
-            </div>
-        </div>
-    </td>
-    <td class="tdline move_d_none"><span class="r_green_x">有货</span></td>
-    <td class="tdline xj_Price move_d_none"><span id="trprice_1" class="trprice">1580.00</span></td>
-    <td class="tdline">
-        <a href="javascript:;" class="remove_cart btn btn-danger btn-sm" style="color:#fff;" onclick="cart.del('1');"><i class="zi zi_trash"></i></a>
-    </td>
-</tr>   
+<section class="container-xl cartMain">
+	<div class="cartMain_hd">
+		<ul class="order_lists cartTop">
+			<li class="list_chk">
+				<!--所有商品全选-->
+				<input type="checkbox" id="all" class="whole_check">
+				<label for="all"></label>全选			</li>
+			<li class="list_con">商品信息</li>
+			<li class="list_info">商品参数</li>
+			<li class="list_price">单价</li>
+			<li class="list_amount">数量</li>
+			<li class="list_sum">金额</li>
+			<li class="list_op">操作</li>
+		</ul>
+	</div>
 
-<tr data-id="1" class="cart_item">
-    <td>
-        <div class="icheckbox_square-blue checked" style="position: relative;"><input type="checkbox" name="prochk" data-store="0" checked="checked" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-    </td>
-    <td>
-        <a href="/Shop/56" target="_blank" title="浏览商品">
-            <img src="style/images/foods_14.jpg" onerror="shownopic(this);" class="preimg_l cart_Ting" style="width: 128px; height: 128px;">
-        </a>
-    </td>
-    <td class="coatShop_title" colspan="2">
-        <a href="/Shop/56" target="_blank" title="浏览商品" style="font-size: 12px;">回锅肉炒西芹</a>
-        <div class="tdline Price_box"><i class="zi zi_yensign"></i><span id="price_1">1580.00</span></div>
-        <table style="margin-top:10px;color:#999;font-size:12px;">
-</table>
-    </td>
-    <td class="pronum_td tdline">
-        <div class="input-group pronum_text" style="display:flex;">
-            <div class="input-group-prepend" onclick="cart.setnum('1','-');">
-                <span class="input-group-text"><i class="zi zi_minus"></i></span>
-            </div>
-            <input type="text" class="form-control" id="pronum_1" value="1" autocomplete="off" onblur="cart.suit.setnum('1',this.value);" data-info="{&quot;min&quot;:1,&quot;max&quot;:9999,&quot;multi&quot;:1}">
-            <div class="input-group-append" onclick="cart.setnum('1','+');">
-                <span class="input-group-text"><i class="zi zi_plus"></i></span>
-            </div>
-        </div>
-    </td>
-    <td class="tdline move_d_none"><span class="r_green_x">有货</span></td>
-    <td class="tdline xj_Price move_d_none"><span id="trprice_1" class="trprice">1580.00</span></td>
-    <td class="tdline">
-        <a href="javascript:;" class="remove_cart btn btn-danger btn-sm" style="color:#fff;" onclick="cart.del('1');"><i class="zi zi_trash"></i></a>
-    </td>
-</tr>
-<tr data-id="1" class="cart_item">
-    <td>
-        <div class="icheckbox_square-blue checked" style="position: relative;"><input type="checkbox" name="prochk" data-store="0" checked="checked" value="1" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-    </td>
-    <td>
-        <a href="/Shop/56" target="_blank" title="浏览商品">
-            <img src="style/images/foods_14.jpg" onerror="shownopic(this);" class="preimg_l cart_Ting" style="width: 128px; height: 128px;">
-        </a>
-    </td>
-    <td class="coatShop_title" colspan="2">
-        <a href="/Shop/56" target="_blank" title="浏览商品" style="font-size: 12px;">回锅肉炒西芹</a>
-        <div class="tdline Price_box"><i class="zi zi_yensign"></i><span id="price_1">1580.00</span></div>
-        <table style="margin-top:10px;color:#999;font-size:12px;">
-</table>
-    </td>
-    <td class="pronum_td tdline">
-        <div class="input-group pronum_text" style="display:flex;">
-            <div class="input-group-prepend" onclick="cart.setnum('1','-');">
-                <span class="input-group-text"><i class="zi zi_minus"></i></span>
-            </div>
-            <input type="text" class="form-control" id="pronum_1" value="1" autocomplete="off" onblur="cart.suit.setnum('1',this.value);" data-info="{&quot;min&quot;:1,&quot;max&quot;:9999,&quot;multi&quot;:1}">
-            <div class="input-group-append" onclick="cart.setnum('1','+');">
-                <span class="input-group-text"><i class="zi zi_plus"></i></span>
-            </div>
-        </div>
-    </td>
-    <td class="tdline move_d_none"><span class="r_green_x">有货</span></td>
-    <td class="tdline xj_Price move_d_none"><span id="trprice_1" class="trprice">1580.00</span></td>
-    <td class="tdline">
-        <a href="javascript:;" class="remove_cart btn btn-danger btn-sm" style="color:#fff;" onclick="cart.del('1');"><i class="zi zi_trash"></i></a>
-    </td>
-</tr>
-</tbody>
-                <tbody><tr>
-                    <td colspan="8">
-                        <input type="button" value="批量删除" class="btn btn-danger pl_remove" style="color:#fff;" onclick="cart.batdel();">
+	<div class="cartBox">
+		<div class="shop_info">
+			<div class="all_check">
+				<!--店铺全选-->
+				<input type="checkbox" id="shop_a" class="shopChoice">
+				<label for="shop_a" class="shop"></label>
+			</div>
+			<div class="shop_name">
+				店铺：<a href="javascript:;">搜猎人艺术生活</a>
+			</div>
+		</div>
+		<div class="order_content">
+			<ul class="order_lists">
+				<li class="list_chk">
+					<input type="checkbox" id="checkbox_2" class="son_check">
+					<label for="checkbox_2"></label>
+				</li>
+				<li class="list_con">
+					<div class="list_img"><a href="javascript:;"><img src="style/images/foods_01.jpg" alt=""></a></div>
+					<div class="list_text"><a href="javascript:;">回锅肉炒西芹今年夏天最美套餐特价送可乐惊喜套餐购买有优惠</a></div>
+				</li>
+				<li class="list_info">
+					<p>规格：默认</p>
+					<p>尺寸：16*16*3(cm)</p>
+				</li>
+				<li class="list_price">
+					<p class="price">￥980</p>
+				</li>
+				<li class="list_amount">
+					<div class="amount_box">
+						<a href="javascript:;" class="reduce reSty">-</a>
+						<input type="text" value="1" class="sum">
+						<a href="javascript:;" class="plus">+</a>
+					</div>
+				</li>
+				<li class="list_sum">
+					<p class="sum_price">￥980</p>
+				</li>
+				<li class="list_op">
+					<p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+				</li>
+			</ul>
+			<ul class="order_lists">
+				<li class="list_chk">
+					<input type="checkbox" id="checkbox_3" class="son_check">
+					<label for="checkbox_3"></label>
+				</li>
+				<li class="list_con">
+					<div class="list_img"><a href="javascript:;"><img src="style/images/foods_02.jpg" alt=""></a></div>
+					<div class="list_text"><a href="javascript:;">回锅肉炒西芹今年夏天最美套餐特价送可乐惊喜套餐购买有优惠-外卖更超值 </a></div>
+				</li>
+				<li class="list_info">
+					<p>规格：默认</p>
+					<p>尺寸：16*16*3(cm)</p>
+				</li>
+				<li class="list_price">
+					<p class="price">￥780</p>
+				</li>
+				<li class="list_amount">
+					<div class="amount_box">
+						<a href="javascript:;" class="reduce reSty">-</a>
+						<input type="text" value="1" class="sum">
+						<a href="javascript:;" class="plus">+</a>
+					</div>
+				</li>
+				<li class="list_sum">
+					<p class="sum_price">￥780</p>
+				</li>
+				<li class="list_op">
+					<p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+				</li>
+			</ul>
+			<ul class="order_lists">
+				<li class="list_chk">
+					<input type="checkbox" id="checkbox_6" class="son_check">
+					<label for="checkbox_6"></label>
+				</li>
+				<li class="list_con">
+					<div class="list_img"><a href="javascript:;"><img src="style/images/foods_03.jpg" alt=""></a></div>
+					<div class="list_text"><a href="javascript:;">回锅肉炒西芹今年夏天最美套餐特价送可乐惊喜套餐购买有优惠-外卖更超值 </a></div>
+				</li>
+				<li class="list_info">
+					<p>规格：默认</p>
+					<p>尺寸：16*16*3(cm)</p>
+				</li>
+				<li class="list_price">
+					<p class="price">￥180</p>
+				</li>
+				<li class="list_amount">
+					<div class="amount_box">
+						<a href="javascript:;" class="reduce reSty">-</a>
+						<input type="text" value="1" class="sum">
+						<a href="javascript:;" class="plus">+</a>
+					</div>
+				</li>
+				<li class="list_sum">
+					<p class="sum_price">￥180</p>
+				</li>
+				<li class="list_op">
+					<p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+				</li>
+			</ul>
+		</div>
+	</div>
 
-                        <span class="Settlement_tex Settlement_texPc">
-                            <span>
-                                数量：<span class="trprice pronum_span">1</span>
-                                总价:<span class="totalmoney">1580.00</span>(不含邮费)
-                            </span>
-                        </span>
-                        <div class="float-right">
-                            <input type="button" value="去结算" class="btn btn-danger ml-2 NextStep_btn" onclick="GetNextStep();" id="RealNext_Btn">
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-			</table>
-        </form>
-    </section>
-</div>
+	<div class="cartBox">
+		<div class="shop_info">
+			<div class="all_check">
+				<!--店铺全选-->
+				<input type="checkbox" id="shop_b" class="shopChoice">
+				<label for="shop_b" class="shop"></label>
+			</div>
+			<div class="shop_name">
+				店铺：<a href="javascript:;">老大妈饭馆</a>
+			</div>
+		</div>
+		<div class="order_content">
+			<ul class="order_lists">
+				<li class="list_chk">
+					<input type="checkbox" id="checkbox_4" class="son_check">
+					<label for="checkbox_4"></label>
+				</li>
+				<li class="list_con">
+					<div class="list_img"><a href="javascript:;"><img src="style/images/foods_04.jpg" alt=""></a></div>
+					<div class="list_text"><a href="javascript:;">回锅肉炒西芹今年夏天最美套餐特价送可乐惊喜套餐购买有优惠-外卖更超值 </a></div>
+				</li>
+				<li class="list_info">
+					<p>规格：默认</p>
+					<p>尺寸：16*16*3(cm)</p>
+				</li>
+				<li class="list_price">
+					<p class="price">￥1980</p>
+				</li>
+				<li class="list_amount">
+					<div class="amount_box">
+						<a href="javascript:;" class="reduce reSty">-</a>
+						<input type="text" value="1" class="sum">
+						<a href="javascript:;" class="plus">+</a>
+					</div>
+				</li>
+				<li class="list_sum">
+					<p class="sum_price">￥1980</p>
+				</li>
+				<li class="list_op">
+					<p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+				</li>
+			</ul>
+			<ul class="order_lists">
+				<li class="list_chk">
+					<input type="checkbox" id="checkbox_5" class="son_check">
+					<label for="checkbox_5"></label>
+				</li>
+				<li class="list_con">
+					<div class="list_img"><a href="javascript:;"><img src="style/images/foods_05.jpg" alt=""></a></div>
+					<div class="list_text"><a href="javascript:;">回锅肉炒西芹今年夏天最美套餐特价送可乐惊喜套餐购买有优惠-外卖更超值 </a></div>
+				</li>
+				<li class="list_info">
+					<p>规格：默认</p>
+					<p>尺寸：16*16*3(cm)</p>
+				</li>
+				<li class="list_price">
+					<p class="price">￥480</p>
+				</li>
+				<li class="list_amount">
+					<div class="amount_box">
+						<a href="javascript:;" class="reduce reSty">-</a>
+						<input type="text" value="1" class="sum">
+						<a href="javascript:;" class="plus">+</a>
+					</div>
+				</li>
+				<li class="list_sum">
+					<p class="sum_price">￥480</p>
+				</li>
+				<li class="list_op">
+					<p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="cartBox">
+		<div class="shop_info">
+			<div class="all_check">
+				<!--店铺全选-->
+				<input type="checkbox" id="shop_c" class="shopChoice">
+				<label for="shop_c" class="shop"></label>
+			</div>
+			<div class="shop_name">
+				店铺：<a href="javascript:;">第二炒货店</a>
+			</div>
+		</div>
+		<div class="order_content">
+			<ul class="order_lists">
+				<li class="list_chk">
+					<input type="checkbox" id="checkbox_8" class="son_check">
+					<label for="checkbox_8"></label>
+				</li>
+				<li class="list_con">
+					<div class="list_img"><a href="javascript:;"><img src="style/images/foods_06.jpg" alt=""></a></div>
+					<div class="list_text"><a href="javascript:;">回锅肉炒西芹今年夏天最美套餐特价送可乐惊喜套餐购买有优惠-外卖更超值 </a></div>
+				</li>
+				<li class="list_info">
+					<p>规格：默认</p>
+					<p>尺寸：16*16*3(cm)</p>
+				</li>
+				<li class="list_price">
+					<p class="price">￥1980</p>
+				</li>
+				<li class="list_amount">
+					<div class="amount_box">
+						<a href="javascript:;" class="reduce reSty">-</a>
+						<input type="text" value="1" class="sum">
+						<a href="javascript:;" class="plus">+</a>
+					</div>
+				</li>
+				<li class="list_sum">
+					<p class="sum_price">￥1980</p>
+				</li>
+				<li class="list_op">
+					<p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+				</li>
+			</ul>
+			<ul class="order_lists">
+				<li class="list_chk">
+					<input type="checkbox" id="checkbox_9" class="son_check">
+					<label for="checkbox_9"></label>
+				</li>
+				<li class="list_con">
+					<div class="list_img"><a href="javascript:;"><img src="style/images/foods_07.jpg" alt=""></a></div>
+					<div class="list_text"><a href="javascript:;">回锅肉炒西芹今年夏天最美套餐特价送可乐惊喜套餐购买有优惠-外卖更超值 </a></div>
+				</li>
+				<li class="list_info">
+					<p>规格：默认</p>
+					<p>尺寸：16*16*3(cm)</p>
+				</li>
+				<li class="list_price">
+					<p class="price">￥480</p>
+				</li>
+				<li class="list_amount">
+					<div class="amount_box">
+						<a href="javascript:;" class="reduce reSty">-</a>
+						<input type="text" value="1" class="sum">
+						<a href="javascript:;" class="plus">+</a>
+					</div>
+				</li>
+				<li class="list_sum">
+					<p class="sum_price">￥480</p>
+				</li>
+				<li class="list_op">
+					<p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+<div class="container-xl bar-wrapper">
+		<div class="bar-right">
+			<div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
+			<div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
+			<div class="calBtn"><a href="javascript:;">结算</a></div>
+		</div>
+	</div>
+</section>
+
+<section class="model_bg"></section>
+<section class="my_model">
+	<p class="title">删除宝贝<span class="closeModel">X</span></p>
+	<p>您确认要删除该宝贝吗？</p>
+	<div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;" class="dialog-close">关闭</a></div>
+</section>
+
 
 
 
@@ -212,23 +365,9 @@
 </p>
 </div>
 </footer>
+<script src="style/js/carts.js"></script>
 <script>
-	function commentAnchor() { $("html,body").animate({ scrollTop: $("#iframe_comm").offset().top - 100 }, 300); }
-    function IfrAutoHeight() {
-        var $ifr = $("#comm_ifr");
-        $ifr.height($ifr.contents().height());
-    }
- 
-</script>
-<script>
-$(document).ready(function(){
-	$(".jqzoom").imagezoom();
-	$("#thumblist li a").click(function(){
-		$(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
-		$(".jqzoom").attr('src',$(this).find("img").attr("mid"));
-		$(".jqzoom").attr('rel',$(this).find("img").attr("big"));
-	});
-});
+
 </script>
 </body>
 </html>
