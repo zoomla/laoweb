@@ -36,6 +36,8 @@ header i { margin-right: 0.4rem; }
 
 .ititle03 { background-image: url("images/ititle03.png"); }
 
+.ihome_list .nav-link.active { color: #d2364c; }
+
 .ihome_list_box { margin-top: 1rem; border: 1px solid #ccc; }
 .ihome_list_box ul { padding-left: 0; margin-bottom: 0; list-style: none; }
 .ihome_list_box li { font-size: 1.42rem; font-weight: bold; text-align: center; border-radius: 10px; }
@@ -51,7 +53,7 @@ footer a { color: #575555; }
 
 .ilogin { padding-top: 6rem; padding-bottom: 2rem; background: url("images/login_bg.png") top no-repeat; background-size: cover; }
 
-.ilogin_con { padding: 2rem 1rem; background: #F06478; border-radius: 1rem; }
+.ilogin_con { padding: 2rem 1rem; background: #e3e3e2; border-radius: 1rem; }
 .ilogin_con h1 { font-size: 1.68rem; }
 
 .mysite { margin-top: 1rem; }

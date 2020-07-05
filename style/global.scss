@@ -59,6 +59,10 @@ a{margin-left: auto;line-height: 2rem;font-size: 0.9rem;}
 .ititle02{@extend .ititle01;background-image: url("images/ititle02.png");}
 .ititle03{@extend .ititle01;background-image: url("images/ititle03.png");}
 
+.ihome_list{
+.nav-link.active{color: $主红色;}
+}
+
 //首页商品列表
 .ihome_list_box{margin-top: 1rem; border: 1px solid #ccc;
 ul{@include myul;}
@@ -81,7 +85,7 @@ a{color: #575555;}
 //用户登录页定义
 .ilogin{padding-top:6rem;padding-bottom: 2rem; background: url("images/login_bg.png") top no-repeat;background-size: cover;}
 
-.ilogin_con{padding: 2rem 1rem; background:#F06478;border-radius: 1rem;
+.ilogin_con{padding: 2rem 1rem; background:#e3e3e2;border-radius: 1rem;
 h1{font-size: 1.68rem;}
 }
 
